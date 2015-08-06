@@ -58,3 +58,8 @@ target_include_directories(libprotobuf PUBLIC ${protobuf_source_dir}/src)
 set_target_properties(libprotobuf PROPERTIES
     COMPILE_DEFINITIONS LIBPROTOBUF_EXPORTS
     OUTPUT_NAME ${LIB_PREFIX}protobuf)
+
+install(TARGETS libprotobuf DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+install(DIRECTORY ${protobuf_source_dir}/src/google/protobuf/stubs
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/include/google/protobuf/stubs
+    FILES_MATCHING PATTERN "*.h")
