@@ -69,7 +69,6 @@ else (MSVC)
   set(LIB_PREFIX)
 endif (MSVC)
 
-include(libprotobuf-lite.cmake)
 include(libprotobuf.cmake)
 include(libprotoc.cmake)
 include(protoc.cmake)
